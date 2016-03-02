@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>条纹背景</title>
     <style>
-        h1{
+        h1 {
             text-align: center;
         }
+
         .wrap {
             margin: 40px auto;
             width: 600px;
@@ -28,12 +29,47 @@
             background: linear-gradient(90deg, #fb3 50%, #58a 0);
             background-size: 40px 100%;
         }
+
+        .bg4 {
+            background: linear-gradient(45deg, #fb3 50%, #58a 0);
+            background-size: 40px 40px;
+        }
+
+        .bg5 {
+            background: linear-gradient(60deg, #fb3 50%, #58a 0);
+            background-size: 40px 40px;
+        }
+
+        .bg6 {
+            background: repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+        }
+
+        .bg7 {
+            background: repeating-linear-gradient(60deg, #fb3 0, #fb3 15px, #58a 0, #58a 30px);
+        }
+
+        .bg8 {
+            background-color: #58a;
+            background-image: repeating-linear-gradient(30deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 15px, transparent 0, transparent 30px);
+        }
     </style>
 </head>
 <body>
-<h1></h1>
+<h1>水平条纹 linear-gradient</h1>
 <div class="wrap bg1"></div>
+<h1>多色水平条纹 linear-gradient</h1>
 <div class="wrap bg2"></div>
+<h1>垂直条纹 linear-gradient</h1>
 <div class="wrap bg3"></div>
+<h1>斜线条纹 linear-gradient (45°)</h1>
+<div class="wrap bg4"></div>
+<h1>斜线条纹 linear-gradient (60°) 失败</h1>
+<div class="wrap bg5"></div>
+<h1>更好的斜线条纹 repeating-linear-gradient(45°)</h1>
+<div class="wrap bg6"></div>
+<h1>更好的斜线条纹 repeating-linear-gradient(60°)</h1>
+<div class="wrap bg7"></div>
+<h1>有弹性的浅条纹 (深色是背景色，浅色用透明度决定)</h1>
+<div class="wrap bg8"></div>
 </body>
 </html>
