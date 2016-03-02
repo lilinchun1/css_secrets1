@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内圆角</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .wrap{
+            margin: 40px auto;
+            padding: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: tan;
+            border-radius: 20px;
+            outline: 10px solid #000;
+            box-shadow:  0 0 0 10px red;
+        }
+        .wrap2{
+            box-shadow:  0 0 0 10px #000;
+        }
+    </style>
+</head>
+<body>
+<h1>解法:border-radius + outline + box-shadow</h1>
+<div class="wrap">
+    Lorem ipsum dolor sit amet.
+</div>
+<div class="wrap wrap2">
+    Lorem ipsum dolor sit amet.
+</div>
+</body>
+</html>

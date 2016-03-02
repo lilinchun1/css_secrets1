@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多边框</title>
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+
+        .wrap {
+            margin: 40px auto;
+            width: 200px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+
+        .wrap1 {
+            box-shadow: 0 0 0 10px deepskyblue, 0 0 0 15px green, 0 0 0 30px red;
+        }
+
+        .wrap2 {
+            border: 10px solid #000;
+            outline: 15px solid red;
+        }
+
+        .wrap3 {
+            outline: 2px dashed #fff;
+            outline-offset: -20px;
+        }
+
+        .wrap4 {
+            border-radius: 20px;
+            border: 10px solid #000;
+            outline: 15px solid red;
+        }
+    </style>
+</head>
+<body>
+<h1>box-shadow解法</h1>
+<div class="wrap wrap1"></div>
+<h1>outline解法</h1>
+<div class="wrap wrap2"></div>
+<h2>outline-offset可以设负值</h2>
+<div class="wrap wrap3"></div>
+<h2>outline问题</h2>
+<div class="wrap wrap4"></div>
+</body>
+</html>

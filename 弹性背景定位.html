@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性背景定位</title>
+    <style>
+        .wrap{
+            width: 200px;
+            height: 100px;
+            color: #fff;
+        }
+        .wrap1{
+            background: #58a url("http://csssecrets.io/images/code-pirate.svg") no-repeat;
+            background-position: right 20px bottom 10px;
+        }
+        .wrap2{
+            padding: 20px;
+            background: #58a url("http://csssecrets.io/images/code-pirate.svg") no-repeat right bottom;
+            background-origin: content-box;
+        }
+        .wrap3{
+            background: #58a url("http://csssecrets.io/images/code-pirate.svg") no-repeat;
+            background-position: calc(100% - 20px) calc(100% - 10px);
+        }
+    </style>
+</head>
+<body>
+<h1>background-position解法</h1>
+<div class="wrap wrap1">
+    Lorem ipsum dolor.
+</div>
+<h1>background-origin解法</h1>
+<div class="wrap wrap2">
+    Lorem ipsum dolor.
+</div>
+<h1>calc()解法</h1>
+<div class="wrap wrap3"></div>
+</body>
+</html>
