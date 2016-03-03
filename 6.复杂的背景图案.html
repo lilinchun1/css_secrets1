@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复杂的背景图案</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .wrap {
+            margin: 40px auto;
+            width: 600px;
+            height: 600px;
+        }
+
+        .wrap1 {
+            background-image: linear-gradient(90deg, rgba(200, 0, 0, .5) 50%, transparent 0),
+            linear-gradient(rgba(200, 0, 0, .5) 50%, transparent 0);
+            background-size: 30px 30px;
+        }
+
+        .wrap2 {
+            background-color: #58a;
+            background-image: linear-gradient(white 1px, transparent 0),
+            linear-gradient(90deg, white 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+
+        .wrap3 {
+            background-color: #58a;
+            background-image: linear-gradient(#fff 2px, transparent 0),
+            linear-gradient(90deg, #fff 2px, transparent 0),
+            linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 0),
+            linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 0);
+            background-size: 75px 75px, 75px 75px, 15px 15px, 15px, 15px;
+        }
+
+        .wrap4 {
+            background: #655;;
+            background-image: radial-gradient(tan 30%, transparent 0);
+            background-size: 30px 30px;
+        }
+
+        .wrap5 {
+            background: #655;;
+            background-image: radial-gradient(tan 30%, transparent 0),
+            radial-gradient(tan 20%, transparent 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        .wrap6 {
+            background: #eee;
+            background-image: linear-gradient(45deg, #bbb 25%, transparent 0);
+            background-size: 30px 30px;
+        }
+
+        .wrap6-1 {
+            background: #eee;
+            background-image: linear-gradient(45deg, transparent 75%, #bbb 0);
+            background-size: 30px 30px;
+        }
+
+        .wrap7 {
+            background: #eee;
+            background-image: linear-gradient(45deg, #bbb 25%, transparent 0),
+            linear-gradient(45deg, transparent 75%, #bbb 0);
+            background-size: 30px 30px;
+        }
+
+        .wrap7-1 {
+            background: #eee;
+            background-image: linear-gradient(45deg, #bbb 25%, transparent 0),
+            linear-gradient(45deg, transparent 75%, #bbb 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        .wrap8 {
+            background: #eee;
+            background-image: linear-gradient(45deg, #20bb0b 25%, transparent 0),
+            linear-gradient(45deg, transparent 75%, #1019bb 0),
+            linear-gradient(45deg, #bb1c0c 25%, transparent 0),
+            linear-gradient(45deg, transparent 75%, #000 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px, 15px 15px, 30px 30px;
+        }
+
+        .wrap8-1 {
+            background: #eee;
+            background-image: linear-gradient(45deg, #20bb0b 25%, transparent 0, transparent 75%, #20bb0b 0),
+            linear-gradient(45deg, #20bb0b 25%, transparent 0, transparent 75%, #20bb0b 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        .wrap9 {
+            background: #eee url('data:image/svg+xml,\
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".25" >\
+            <rect x="50" width="50" height="50" />\
+            <rect y="50" width="50" height="50" />\
+            </svg>');
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body>
+<a href="https://philiprogers.com/svgpatterns/" target="_blank">https://philiprogers.com/svgpatterns/</a>
+<br>
+<a href="http://play.csssecrets.io/blueprint" target="_blank">http://play.csssecrets.io/blueprint</a>
+<br>
+<a href="http://play.csssecrets.io/polka" target="_blank">http://play.csssecrets.io/polka</a>
+<br>
+<a href="http://play.csssecrets.io/checkerboard-svg" target="_blank">http://play.csssecrets.io/checkerboard-svg</a>
+<h1>网格 合并数个线性渐变</h1>
+<div class="wrap wrap1"></div>
+<h1>网格2</h1>
+<div class="wrap wrap2"></div>
+<h1>网格3</h1>
+<div class="wrap wrap3"></div>
+<h1>圆点花纹</h1>
+<div class="wrap wrap4"></div>
+<h1>圆点花纹2</h1>
+<div class="wrap wrap5"></div>
+<h1>棋盘1 （从两个直角三角形建立方块）</h1>
+<div class="wrap wrap6"></div>
+<h1>棋盘1-1 （从两个直角三角形建立方块）</h1>
+<div class="wrap wrap6-1"></div>
+<h1>棋盘2 （从两个直角三角形建立方块）</h1>
+<div class="wrap wrap7"></div>
+<h1>棋盘2-1 （从两个直角三角形建立方块）</h1>
+<div class="wrap wrap7-1"></div>
+<h1>棋盘3 （从两个直角三角形建立方块）</h1>
+<div class="wrap wrap8"></div>
+<h1>棋盘3-1 （从两个直角三角形建立方块）</h1>
+<div class="wrap wrap8-1"></div>
+<h1>棋盘4 svg</h1>
+<div class="wrap wrap9"></div>
+</body>
+</html>
