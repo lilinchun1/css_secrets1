@@ -103,6 +103,44 @@
             </svg>');
             background-size: 30px 30px;
         }
+        .wrap10{
+            background: url("data:image/svg+xml,\
+            <svg xmlns='http://www.w3.org/2000/svg' width='60' height='60'>\
+            <rect width='60' height='60' fill='#fff'/>\
+            <rect width='42.42' height='42.42' transform='translate(30 0) rotate(45)' fill='#444'/>\
+            </svg>");
+        }
+        .wrap11{
+            background:
+                    repeating-radial-gradient(
+                            circle,
+                            transparent,
+                            transparent 3.5em,
+                            tomato 3.5em,
+                            tomato 4.5em
+                    ),
+                    repeating-radial-gradient(
+                            circle,
+                            transparent,
+                            transparent 3.5em,
+                            dodgerblue 3.5em,
+                            dodgerblue 4.5em
+                    ),
+                    repeating-radial-gradient(
+                            circle,
+                            transparent,
+                            transparent 2.5em,
+                            gold 2.5em,
+                            gold 2.75em
+                    ), floralwhite;
+
+            background-blend-mode: multiply;
+            background-size: 10em 10em;
+            background-position:
+                    0 0,
+                    5em 5em,
+                    10em 5em;
+        }
     </style>
 </head>
 <body>
@@ -113,6 +151,8 @@
 <a href="http://play.csssecrets.io/polka" target="_blank">http://play.csssecrets.io/polka</a>
 <br>
 <a href="http://play.csssecrets.io/checkerboard-svg" target="_blank">http://play.csssecrets.io/checkerboard-svg</a>
+<br>
+<a href="http://bennettfeely.com/gradients/" target="_blank">http://bennettfeely.com/gradients/</a>
 <h1>网格 合并数个线性渐变</h1>
 <div class="wrap wrap1"></div>
 <h1>网格2</h1>
@@ -137,5 +177,9 @@
 <div class="wrap wrap8-1"></div>
 <h1>棋盘4 svg</h1>
 <div class="wrap wrap9"></div>
+<h1>棋盘4-1 svg</h1>
+<div class="wrap wrap10"></div>
+<h1></h1>
+<div class="wrap wrap11"></div>
 </body>
 </html>
