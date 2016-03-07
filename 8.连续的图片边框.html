@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.连续的图片边框</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        div{
+            margin: 40px auto;
+            width: 21em;
+            resize: both;
+            overflow: hidden;
+        }
+        .wrap {
+            background-image: url('http://csssecrets.io/images/stone-art.jpg');
+            background-size: cover;
+            padding: 1em;
+        }
+
+        .wrap > div {
+            margin: 0;
+            background: #fff;
+            padding: 1em;
+            width: calc(100% - 2em);
+            resize: none;
+        }
+
+        .wrap2 {
+            border: 40px solid transparent;
+            border-image: 33.334% url('data:image/svg+xml,<svg xmlns="http:%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="30"> \
+	                      <circle cx="5" cy="5" r="5" fill="%23ab4"%2F><circle cx="15" cy="5" r="5" fill=" %23655"%2F> \
+	                      <circle cx="25" cy="5" r="5" fill="%23e07"%2F><circle cx="5" cy="15" r="5" fill=" %23655"%2F> \
+	                      <circle cx="15" cy="15" r="5" fill="hsl(15, 25%, 75%)"%2F> \
+	                      <circle cx="25" cy="15" r="5" fill=" %23655"%2F><circle cx="5" cy="25" r="5" fill="%23fb3"%2F> \
+	                      <circle cx="15" cy="25" r="5" fill=" %23655"%2F><circle cx="25" cy="25" r="5" fill="%2358a"%2F><%2Fsvg>');
+            padding: 1em;
+            font: 130%/1.6 Baskerville, Palatino, serif;
+
+        }
+
+        .wrap3 {
+            border: 40px solid transparent;
+            border-image: 33.334% url('data:image/svg+xml,<svg xmlns="http:%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="30"> \
+	                      <circle cx="5" cy="5" r="5" fill="%23ab4"%2F><circle cx="15" cy="5" r="5" fill=" %23655"%2F> \
+	                      <circle cx="25" cy="5" r="5" fill="%23e07"%2F><circle cx="5" cy="15" r="5" fill=" %23655"%2F> \
+	                      <circle cx="15" cy="15" r="5" fill="hsl(15, 25%, 75%)"%2F> \
+	                      <circle cx="25" cy="15" r="5" fill=" %23655"%2F><circle cx="5" cy="25" r="5" fill="%23fb3"%2F> \
+	                      <circle cx="15" cy="25" r="5" fill=" %23655"%2F><circle cx="25" cy="25" r="5" fill="%2358a"%2F><%2Fsvg>');
+            padding: 1em;
+            font: 130%/1.6 Baskerville, Palatino, serif;
+            margin-top: 1em;
+            border-image-repeat: round;
+        }
+
+        .wrap4 {
+            padding: 1em;
+            border: 1em solid transparent;
+            background: linear-gradient(white, white), url('http://csssecrets.io/images/stone-art.jpg');
+            background-size: cover;
+            background-clip: padding-box, border-box;
+        }
+        .wrap5 {
+            padding: 1em;
+            border: 1em solid transparent;
+            background: linear-gradient(white, white), url('http://csssecrets.io/images/stone-art.jpg');
+            background-size: cover;
+            background-clip: padding-box, border-box;
+            background-origin:border-box;
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/border-image" target="_blank">http://play.csssecrets.io/border-image</a>
+<br>
+<a href="http://play.csssecrets.io/continuous-image-borders" target="_blank">http://play.csssecrets.io/continuous-image-borders</a>
+
+<h1>最简单的方式 使用2个html元素</h1>
+<div class="wrap">
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto beatae facilis fuga ipsam laudantium,
+        repudiandae! Autem inventore maxime obcaecati odit? Consequuntur doloremque eius eum in labore nesciunt optio
+        sapiente voluptate!
+    </div>
+</div>
+<h1>border-image 例子</h1>
+<div class="wrap2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aliquid animi blanditiis dolorem, error eveniet
+    laudantium nobis non officia optio quam quidem reprehenderit sunt ut veniam voluptatum! Animi, corporis?
+</div>
+<div class="wrap3">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid, corporis cupiditate facere fugiat
+    incidunt iusto laborum nulla pariatur porro repellendus rerum sed soluta, tempora tempore totam ut velit voluptas?
+</div>
+<h1>解法1</h1>
+<div class="wrap4">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda culpa inventore itaque voluptatem! Accusamus
+    adipisci asperiores consequuntur, cupiditate harum pariatur. Alias beatae esse harum impedit mollitia sapiente sequi
+    temporibus!
+</div>
+<h1>解法 1-1 设定 background-origin</h1>
+<div class="wrap5">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda culpa inventore itaque voluptatem! Accusamus
+    adipisci asperiores consequuntur, cupiditate harum pariatur. Alias beatae esse harum impedit mollitia sapiente sequi
+    temporibus!
+</div>
+</body>
+</html>

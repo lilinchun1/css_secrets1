@@ -21,28 +21,73 @@
 
         .wrap2 {
             background: hsl(20, 40%, 90%);
-            background-image:
-                linear-gradient(90deg, #fb3 10px, transparent 0),
-                linear-gradient(90deg, #ab4 20px, transparent 0),
-                linear-gradient(90deg, #655 20px, transparent 0);
+            background-image: linear-gradient(90deg, #fb3 10px, transparent 0),
+            linear-gradient(90deg, #ab4 20px, transparent 0),
+            linear-gradient(90deg, #655 20px, transparent 0);
             background-size: 80px 100%, 60px 100%, 40px 100%;
         }
+
         .wrap3 {
             background: hsl(20, 40%, 90%);
-            background-image:
-                    linear-gradient(90deg, #fb3 10px, transparent 0),
-                    linear-gradient(90deg, #ab4 20px, transparent 0),
-                    linear-gradient(90deg, #655 20px, transparent 0);
+            background-image: linear-gradient(90deg, #fb3 10px, transparent 0),
+            linear-gradient(90deg, #ab4 20px, transparent 0),
+            linear-gradient(90deg, #655 20px, transparent 0);
             background-size: 41px 100%, 61px 100%, 83px 100%;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        @keyframes radius {
+            50% {
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes color {
+            33% {
+                color: orange;
+            }
+            66% {
+                color: deeppink
+            }
+        }
+
+        @keyframes width {
+            50% {
+                border-width: .3em;
+            }
+        }
+
+        .loading {
+            content: '';
+            display: block;
+            width: 4em;
+            height: 4em;
+            margin: 0 auto 1em;
+            border: 1.5em solid;
+            color: yellowgreen;
+            box-sizing: border-box;
+            animation: 1s spin, .7s radius, 1.1s color, 1.3s width;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
     </style>
 </head>
 <body>
+<a href="http://play.csssecrets.io/cicada-stripes" target="_blank">http://play.csssecrets.io/cicada-stripes</a>
+<br>
+<a href="http://play.csssecrets.io/cicanimation" target="_blank">http://play.csssecrets.io/cicanimation</a>
 <h1>标准</h1>
 <div class="wrap wrap1"></div>
 <h1>解法 条纹分层 条纹宽度写死 用background-size来控制间距</h1>
 <div class="wrap wrap2"></div>
 <h1>解法 最大化重复的拼贴砖的尺寸， 为了达到最大的最小公倍数，数字必须互质</h1>
 <div class="wrap wrap3"></div>
+<h1>套用数个有质数时间间隔的动画 制作出一个看起来不像是规律重复的动画</h1>
+<div class="loading"></div>
 </body>
 </html>
