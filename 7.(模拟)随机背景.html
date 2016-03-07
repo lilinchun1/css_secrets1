@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>(模拟)随机背景</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .wrap {
+            margin: 40px auto;
+            width: 800px;
+            height: 350px;
+        }
+
+        .wrap1 {
+            background: linear-gradient(90deg, #fb3 15%, #655 0, #655 40%, #ab4 0, #ab4 65%, hsl(20, 40%, 90%) 0);
+            background-size: 80px 100%;
+        }
+
+        .wrap2 {
+            background: hsl(20, 40%, 90%);
+            background-image:
+                linear-gradient(90deg, #fb3 10px, transparent 0),
+                linear-gradient(90deg, #ab4 20px, transparent 0),
+                linear-gradient(90deg, #655 20px, transparent 0);
+            background-size: 80px 100%, 60px 100%, 40px 100%;
+        }
+        .wrap3 {
+            background: hsl(20, 40%, 90%);
+            background-image:
+                    linear-gradient(90deg, #fb3 10px, transparent 0),
+                    linear-gradient(90deg, #ab4 20px, transparent 0),
+                    linear-gradient(90deg, #655 20px, transparent 0);
+            background-size: 41px 100%, 61px 100%, 83px 100%;
+        }
+    </style>
+</head>
+<body>
+<h1>标准</h1>
+<div class="wrap wrap1"></div>
+<h1>解法 条纹分层 条纹宽度写死 用background-size来控制间距</h1>
+<div class="wrap wrap2"></div>
+<h1>解法 最大化重复的拼贴砖的尺寸， 为了达到最大的最小公倍数，数字必须互质</h1>
+<div class="wrap wrap3"></div>
+</body>
+</html>
