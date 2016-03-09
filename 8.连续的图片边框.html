@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <title>8.连续的图片边框</title>
     <style>
-        h1{
+        h1 {
             text-align: center;
         }
-        div{
+
+        div {
             margin: 40px auto;
             width: 21em;
             resize: both;
             overflow: hidden;
         }
+
         .wrap {
             background-image: url('http://csssecrets.io/images/stone-art.jpg');
             background-size: cover;
@@ -61,13 +63,48 @@
             background-size: cover;
             background-clip: padding-box, border-box;
         }
+
         .wrap5 {
             padding: 1em;
             border: 1em solid transparent;
             background: linear-gradient(white, white), url('http://csssecrets.io/images/stone-art.jpg');
             background-size: cover;
             background-clip: padding-box, border-box;
-            background-origin:border-box;
+            background-origin: border-box;
+        }
+
+        .wrap6 {
+            padding: 1em;
+            border: 1em solid transparent;
+            background: linear-gradient(white, white) padding-box,
+            repeating-linear-gradient(-45deg,
+                    red 0, red 12.5%,
+                    transparent 0, transparent 25%,
+                    #58a 0, #58a 37.5%,
+                    transparent 0, transparent 50%) 0/ 5em 5em;
+        }
+
+        .wrap7 {
+            border: 16px solid transparent;
+            border-image: 16 repeating-linear-gradient(-45deg, red 0, red 1em, transparent 0, transparent 2em,
+            #58a 0, #58a 3em, transparent 0, transparent 4em);
+        }
+
+        .wrap8 {
+            padding: 1em;
+            border: 1px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+            repeating-linear-gradient(-45deg,
+                    black 0, black 25%, white 0, white 50%) 0 / .6em .6em;
+            animation: ants 12s linear infinite;
+        }
+        @keyframes ants {
+            0% {
+                background-position: 0;
+            }
+            100% {
+                background-position: 100%;
+            }
         }
     </style>
 </head>
@@ -75,6 +112,10 @@
 <a href="http://play.csssecrets.io/border-image" target="_blank">http://play.csssecrets.io/border-image</a>
 <br>
 <a href="http://play.csssecrets.io/continuous-image-borders" target="_blank">http://play.csssecrets.io/continuous-image-borders</a>
+<br>
+<a href="http://play.csssecrets.io/vintage-envelope" target="_blank">http://play.csssecrets.io/vintage-envelope</a>
+<br>
+<a href="http://play.csssecrets.io/vintage-envelope-border-image" target="_blank">http://play.csssecrets.io/vintage-envelope-border-image</a>
 
 <h1>最简单的方式 使用2个html元素</h1>
 <div class="wrap">
@@ -104,6 +145,22 @@
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda culpa inventore itaque voluptatem! Accusamus
     adipisci asperiores consequuntur, cupiditate harum pariatur. Alias beatae esse harum impedit mollitia sapiente sequi
     temporibus!
+</div>
+<h1>复古信封边框</h1>
+<div class="wrap6">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur cum dignissimos dolore doloribus,
+    expedita facere facilis hic illum, ipsam iusto laudantium, molestias odio placeat qui quibusdam unde voluptas
+    voluptatum!
+</div>
+<h1>复古信封边框 border-image达成</h1>
+<div class="wrap7">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur, cum exercitationem facere fugit itaque
+    maiores nam omnis pariatur porro. Ducimus iusto nisi quae reiciendis saepe! Aspernatur in sed voluptatem.
+</div>
+<h1>像蚂蚁行军的虚线框</h1>
+<div class="wrap8">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi consectetur fuga illo incidunt ipsam
+    itaque libero maiores nam neque non nulla obcaecati, pariatur provident quam sint sit tenetur, voluptate?
 </div>
 </body>
 </html>
