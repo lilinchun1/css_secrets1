@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>平行四边形</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .wrap {
+            padding: 10px 15px;
+            background-color: #5588aa;
+            transform: skew(-45deg);
+            display: inline-block;
+        }
+
+        .wrap a {
+            color: #fff;
+            text-decoration: none;
+            transform: skew(45deg);
+            display: block;
+        }
+
+        .wrap1 {
+            position: relative;
+            padding: 10px 15px;
+            color: #fff;
+            display: inline-block;
+        }
+
+        .wrap1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: #5588aa;
+            transform: skew(-45deg);
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/parallelograms-pseudo" target="_blank">http://play.csssecrets.io/parallelograms-pseudo</a>
+<h1>嵌套元素解法</h1>
+<div class="wrap">
+    <a href="">click me</a>
+</div>
+<h1>伪元素解法</h1>
+<div class="wrap1">
+    click me
+</div>
+</body>
+</html>
