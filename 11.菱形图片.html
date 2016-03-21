@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11.菱形图片</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            margin: 40px auto;
+        }
+
+        .wrap {
+            width: 200px;
+            transform: rotate(45deg);
+            overflow: hidden;
+            border: 1px dashed #000;
+        }
+
+        .wrap > img {
+            max-width: 100%;
+            transform: rotate(-45deg);
+        }
+
+        .wrap2 {
+            width: 200px;
+            transform: rotate(45deg);
+            overflow: hidden;
+            border: 1px dashed #000;
+        }
+
+        .wrap2 > img {
+            max-width: 100%;
+            transform: rotate(-45deg) scale(1.42);
+        }
+
+        .wrap3 {
+            width: 200px;
+            overflow: hidden;
+            border: 1px dashed #000;
+        }
+
+        .wrap3 > img {
+            max-width: 100%;
+            -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        }
+
+        .wrap4 {
+            width: 200px;
+            overflow: hidden;
+            border: 1px dashed #000;
+        }
+
+        .wrap4 > img {
+            max-width: 100%;
+            -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            -webkit-transition: 1s;
+            transition: 1s;
+        }
+
+        .wrap4 > img:hover {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/diamond-images" target="_blank">http://play.csssecrets.io/diamond-images</a>
+<br>
+<a href="http://play.csssecrets.io/diamond-clip" target="_blank">http://play.csssecrets.io/diamond-clip</a>
+<h1>以变形为主的解法</h1>
+<div class="wrap">
+    <img src="http://csssecrets.io/images/adamcatlace.jpg"/>
+</div>
+<h1>以变形为主的解法</h1>
+<div class="wrap2">
+    <img src="http://csssecrets.io/images/adamcatlace.jpg"/>
+</div>
+<h1>以裁剪路径为主的解法</h1>
+<div class="wrap3">
+    <img src="http://csssecrets.io/images/adamcatlace.jpg"/>
+</div>
+<h1>以裁剪路径为主的解法(动画)</h1>
+<div class="wrap4">
+    <img src="http://csssecrets.io/images/adamcatlace.jpg"/>
+</div>
+</body>
+</html>
