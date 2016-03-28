@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>不规则的四边形页签</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        div {
+            padding: .5em 1em;
+            display: inline-block;
+            position: relative;
+            color: #fff;
+        }
+
+        .wrap::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: #58a;
+            transform: perspective(10px) rotatex(5deg);
+        }
+
+        .wrap2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: #58a;
+            transform: perspective(10px) rotatex(5deg);
+            transform-origin: bottom;
+        }
+
+        .wrap3::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: #58a;
+            transform: scaley(1.3) perspective(10px) rotatex(5deg);
+            transform-origin: bottom;
+        }
+
+        .nav > a {
+            position: relative;
+            display: inline-block;
+            padding: .3em 1em 0px;
+        }
+
+        .nav > a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background-color: #cccccc;
+            background-image: linear-gradient(hsla(0, 0%, 100%, .6), hsla(0, 0%, 100%, 0));
+            border: 1px solid rgba(0, 0, 0, .4);
+            border-bottom: none;
+            border-radius: .5em .5em 0 0;
+            box-shadow: inset 0 .15em white;
+            transform: scale(1.1, 1.3) perspective(.5em) rotatex(5deg);
+            transform-origin: bottom;
+        }
+
+        .nav > a:nth-of-type(2)::before {
+            transform-origin: bottom left;
+        }
+
+        .nav > a:nth-of-type(3)::before {
+            transform-origin: bottom right;
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/trapezoid-tabs" target="_blank">http://play.csssecrets.io/trapezoid-tabs</a>
+<h1>解法 3d变形</h1>
+<div class="wrap">
+    trapezoid
+</div>
+<h1>解法 3d变形 增加transform-origin</h1>
+<div class="wrap2">
+    trapezoid
+</div>
+<h1>解法 3d变形 增加scaley 弥补消失的空白</h1>
+<div class="wrap3">
+    trapezoid
+</div>
+<h1>应用</h1>
+<div class="nav">
+    <a href="">lorem1111111</a>
+    <a href="">lorem2</a>
+    <a href="">lorem3333333</a>
+</div>
+</body>
+</html>
