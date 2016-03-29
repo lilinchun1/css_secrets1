@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单的圆饼图</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            margin: 40px auto;
+        }
+
+        .wrap {
+            width: 100px;
+            height: 100px;
+            color: #655;
+            border-radius: 50%;
+            background: yellowgreen;
+            background-image: linear-gradient(to right, transparent 50%, currentColor 0);
+        }
+
+        .wrap::before {
+            content: '';
+            display: block;
+            margin-left: 50%;
+            height: 100px;
+            border-radius: 0 100% 100% 0 / 50%;
+            background-color: inherit;
+            transform-origin: left;
+            transform: rotate(0turn);
+            animation: spin 3s linear infinite, bg 6s step-end infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(.5turn);
+            }
+        }
+
+        @keyframes bg {
+            50% {
+                background: currentColor;
+            }
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/pie-animated" target="_blank">http://play.csssecrets.io/pie-animated</a>
+<br>
+<a href="http://play.csssecrets.io/static-interpolation" target="_blank">http://play.csssecrets.io/static-interpolation</a>
+
+<h1>以变形为主的解法</h1>
+<div class="wrap"></div>
+</body>
+</html>
