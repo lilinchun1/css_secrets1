@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15.单边阴影</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            margin: 40px auto;
+        }
+
+        .wrap {
+            width: 200px;
+            height: 100px;
+            background-color: yellowgreen;
+            box-shadow: 0 5px 4px -4px #000;
+        }
+
+        .wrap2 {
+            width: 200px;
+            height: 100px;
+            background-color: yellowgreen;
+            box-shadow: 3px 3px 6px -3px #000;
+        }
+
+        .wrap3 {
+            width: 200px;
+            height: 100px;
+            background-color: yellowgreen;
+            box-shadow: 5px 0 5px -5px #000, -5px 0 5px -5px #000;
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/shadow-one-side" target="_blank">http://play.csssecrets.io/shadow-one-side</a><br>
+<a href="http://play.csssecrets.io/shadow-2-sides" target="_blank">http://play.csssecrets.io/shadow-2-sides</a><br>
+<a href="http://play.csssecrets.io/shadow-opposite-sides" target="_blank">http://play.csssecrets.io/shadow-opposite-sides</a><br>
+<h1>阴影原理 box-shadow: 2px 3px 4px #000</h1>
+<p>
+    1、画出颜色为#000的矩形，大小和位置与元素相同。<br>
+    2、把它往右移2px，往下移3px。<br>
+    3、套用4px的模糊，这显示在阴影的边缘，阴影的颜色和完全透明之间的转换大概跟两倍的模糊半径一样长（这里是8px）<br>
+    4、然后模糊的矩形跟元素交集的地方会被剪掉。<br><br>
+    (精确的说我们会看到上方有1px（4px - 3px）的阴影，左边有2px（4px - 2px）的阴影，右边有6px（2px + 4px）的阴影， 下方有7px（3px +
+    4px）的阴影。实际看起来会比较小，因为边缘的颜色转变不是线性的)
+</p>
+<h1>单边阴影 解法负的扩散半径</h1>
+<p>
+    扩散半径会随着你所指定的数值增加阴影的尺寸，或者（如果是负的话）减少阴影的尺寸。
+</p>
+<div class="wrap"></div>
+
+<h1>相邻两边的阴影</h1>
+<p>
+    我们需要两个偏移值，他们的数值必须大于或等于模糊半径的一半
+</p>
+<div class="wrap2"></div>
+
+<h1>相对两边的阴影</h1>
+<p>
+    使用两个阴影，一边一个。
+</p>
+<div class="wrap3"></div>
+</body>
+</html>
