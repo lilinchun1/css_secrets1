@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>19.折角效果</title>
     <style>
-        h1 {
+        h1, p {
             text-align: center;
         }
 
@@ -21,15 +21,55 @@
             background: linear-gradient(-135deg, transparent 50%, rgba(0, 0, 0, .7) 0) no-repeat 100% 0 / 30px 30px,
             linear-gradient(-135deg, transparent 21px, #58a 0);
         }
+
+        .wrap2 {
+            background: linear-gradient(-150deg, transparent 50%, rgba(0, 0, 0, .7) 0) no-repeat 100% 0 / 42px 26px,
+            linear-gradient(-150deg, transparent 21px, #58a 0);
+        }
+
+        .wrap3 {
+            position: relative;
+            border-radius: 10px;
+            background: linear-gradient(-160deg, transparent 30px, #58a 0);
+        }
+
+        .wrap3::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 33px;
+            height: 88px;
+            background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, .4) 0) 100% 0 no-repeat;
+            transform: translatey(-57px) rotate(-50deg);
+            transform-origin: bottom right;
+            border-bottom-left-radius: inherit;
+            box-shadow: -2px 4px 6px -1px rgba(0, 0, 0, .15);
+        }
     </style>
 </head>
 <body>
 <a href="http://play.csssecrets.io/folded-corner" target="_blank">http://play.csssecrets.io/folded-corner</a>
 <br>
+<a href="http://play.csssecrets.io/folded-corner-realistic" target="_blank">http://play.csssecrets.io/folded-corner-realistic</a>
+<br>
+<a href="http://play.csssecrets.io/folded-corner-mixin" target="_blank">http://play.csssecrets.io/folded-corner-mixin</a>
 <h1>45°的解法</h1>
 <div class="wrap1">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci eaque expedita iusto quod! Cumque iusto quas
     quis rem reprehenderit. Explicabo fuga laborum molestiae nesciunt nostrum nulla sequi vel voluptates.
+</div>
+<h1>其它角度解法</h1>
+<p>改变角度后，结果变得不真实</p>
+<div class="wrap2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur, at atque dignissimos, doloremque doloribus
+    eaque explicabo fugit impedit ipsam ipsum odit officiis omnis rem repellat sint suscipit totam ut?
+</div>
+<p>使用伪元素解决</p>
+<div class="wrap3">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid culpa cupiditate dignissimos doloremque eligendi
+    error eum incidunt magni molestiae, numquam placeat quisquam quos recusandae reiciendis rerum similique tenetur
+    veritatis voluptatibus?
 </div>
 </body>
 </html>
