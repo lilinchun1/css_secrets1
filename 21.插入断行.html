@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>21.插入断行</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        dd {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .wrap1 dt,
+        .wrap1 dd {
+            display: inline;
+        }
+
+        .wrap1 dd::after {
+            content: '\A';
+            white-space: pre;
+        }
+
+        .wrap2 dt,
+        .wrap2 dd {
+            display: inline;
+        }
+
+        .wrap2 dt:not(:first-of-type)::before {
+            content: '\A';
+            white-space: pre;
+        }
+
+        .wrap2 dd + dd::before {
+            content: ',';
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/line-breaks" target="_blank">http://play.csssecrets.io/line-breaks</a>
+<h1>原始</h1>
+<dl>
+    <dt>Name:</dt>
+    <dd>Lea Verou</dd>
+
+    <dt>Email:</dt>
+    <dd>lea@verou.me</dd>
+    <dd>leaverou@mit.edu</dd>
+
+    <dt>Location:</dt>
+    <dd>Earth</dd>
+</dl>
+
+<h1>1.伪元素断行 content: '\A'; white-space: pre; </h1>
+<dl class="wrap1">
+    <dt>Name:</dt>
+    <dd>Lea Verou</dd>
+
+    <dt>Email:</dt>
+    <dd>lea@verou.me</dd>
+    <dd>leaverou@mit.edu</dd>
+
+    <dt>Location:</dt>
+    <dd>Earth</dd>
+</dl>
+
+<h1>2.断行加在dt前面（不是第一个dt）, dd后的dd前加上逗号</h1>
+<dl class="wrap2">
+    <dt>Name:</dt>
+    <dd>Lea Verou</dd>
+
+    <dt>Email:</dt>
+    <dd>lea@verou.me</dd>
+    <dd>leaverou@mit.edu</dd>
+
+    <dt>Location:</dt>
+    <dd>Earth</dd>
+
+    <dt>Email:</dt>
+    <dd>lea@verou.me</dd>
+    <dd>leaverou@mit.edu</dd>
+    <dd>lea@verou.me</dd>
+    <dd>leaverou@mit.edu </dd>
+    <dd>lea@verou.me</dd>
+
+    <dt>Email:</dt><dd>lea@verou.me</dd><dd>leaverou@mit.edu</dd><dd>lea@verou.me</dd><dd>leaverou@mit.edu </dd>
+</dl>
+</body>
+</html>
