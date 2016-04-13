@@ -28,8 +28,13 @@
     </code>
 </pre>
 <p>
+    src:url("fonts/ampersand.woff")<br>
+    src: local('Baskerville-Italic')<br>
+    @font-face规则里的src叙述子也接受local()函数，用来指定本机字体的名称。
+</p>
+<p>
     unicode-range: U+26; 只在@font-face规则里才有作用。它会把字元限制在一个子集。 它是用unicode codepoints，因此使用前
-    必须找到向指定的字元的16进位codepoint， 可以使用一下js代码： "&".charCodeAt(0).toString(16) //returns 26。 得到26了后 在前面加上 “U+”， 就得到  U+26 了。 <b>(如果向指定某个区间的字元 像这样 U+400-4FF)</b>
+    必须找到向指定的字元的16进位codepoint， 有很多线上资源 也可以使用一下js代码： "&".charCodeAt(0).toString(16) //returns 26。 得到26了后 在前面加上 “U+”， 就得到  U+26 了。 <b>(如果向指定某个区间的字元 像这样 U+400-4FF)</b>
 </p>
 <script>
     console.log("@".charCodeAt(0).toString(16))
