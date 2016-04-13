@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>25.漂亮的 & 符号</title>
+    <style>
+        @font-face {
+            font-family: Ampersand;
+            src: local('Baskerville-Italic'), local('GoudyOldStyleT-Italic'), local('Garamond-Italic'), local('Palatino-Italic');
+            unicode-range: U+26 ,U+40, U+24;
+        }
+
+        h1 {
+            font-family: Ampersand, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/ampersands" target="_blank">http://play.csssecrets.io/ampersands</a>
+<h1>HTML & CSS  $$ @@</h1>
+<pre>
+    <code>
+    @font-face {
+        font-family: Ampersand;
+        src: local('Baskerville-Italic'), local('GoudyOldStyleT-Italic'), local('Garamond-Italic'), local('Palatino-Italic');
+        unicode-range: U+26;
+    }
+    </code>
+</pre>
+<p>
+    unicode-range: U+26; 只在@font-face规则里才有作用。它会把字元限制在一个子集。 它是用unicode codepoints，因此使用前
+    必须找到向指定的字元的16进位codepoint， 可以使用一下js代码： "&".charCodeAt(0).toString(16) //returns 26。 得到26了后 在前面加上 “U+”， 就得到  U+26 了。 <b>(如果向指定某个区间的字元 像这样 U+400-4FF)</b>
+</p>
+<script>
+    console.log("@".charCodeAt(0).toString(16))
+</script>
+</body>
+</html>
