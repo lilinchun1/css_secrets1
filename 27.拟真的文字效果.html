@@ -122,12 +122,25 @@
             filter: blur(4px);
             cursor: pointer;
         }
+
+        .wrap11 {
+            font-size: 4em;
+            background: #58a;
+            color: #fff;
+            text-shadow: 0 1px hsl(0, 0%, 85%),
+            0 2px hsl(0, 0%, 80%),
+            0 3px hsl(0, 0%, 75%),
+            0 4px hsl(0, 0%, 70%),
+            0 5px hsl(0, 0%, 65%),
+            0 5px 10px #000;
+        }
     </style>
 </head>
 <body>
 <a href="http://play.csssecrets.io/letterpress" target="_blank">http://play.csssecrets.io/letterpress</a><br>
 <a href="http://play.csssecrets.io/stroked-text" target="_blank">http://play.csssecrets.io/stroked-text</a><br>
 <a href="http://play.csssecrets.io/glow" target="_blank">http://play.csssecrets.io/glow</a><br>
+<a href="http://play.csssecrets.io/extruded" target="_blank">http://play.csssecrets.io/extruded</a><br>
 <h1>凸版印刷</h1>
 <p>
     凸版印刷效果基础条件：下方颜色较浅的阴影（或上方颜色较深的）会制造出一个物件被“刻在”表面的假象。<br>
@@ -181,6 +194,11 @@
 <h2>注意个问题，上面的效果，如果浏览器不支援，文字不会出现。 另外也可以通过css滤镜来模糊文字</h2>
 <div class="wrap10">
     <a href="">glow</a>
+</div>
+<h1>浮凸文字</h1>
+<h2>效果是浮凸（擬似3d）的文字。主要概念是有很多层阴影，没有模糊，只有1px的差异，慢慢变暗，最后又一道非常模糊的深色阴影，模拟出会产生的暗部</h2>
+<div class="wrap11">
+    CSS3d
 </div>
 </body>
 </html>
