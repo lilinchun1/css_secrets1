@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>27.拟真的文字效果</title>
+    <style>
+        div {
+            margin: 20px 0;
+            padding: .8em 1em;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 20px;
+        }
+
+        .wrap1 {
+            background-color: hsl(210, 13%, 60%);
+            color: hsl(210, 13%, 30%);
+            text-shadow: 0 .03em .03em hsla(0, 0%, 100%, .8);
+        }
+
+        .wrap2 {
+            background-color: hsl(210, 13%, 40%);
+            color: hsl(210, 13%, 75%);
+            text-shadow: 0 -1px 1px #000;
+        }
+
+        .wrap3 {
+            background: deeppink;
+            color: #fff;
+            font-size: 70px;
+            text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+        }
+
+        .wrap4 {
+            background: deeppink;
+            color: #fff;
+            font-size: 70px;
+            text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+        }
+
+        .wrap5 {
+            background: deeppink;
+            color: #fff;
+            font-size: 70px;
+            text-shadow: 3px 3px 0 black, -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black;
+        / / text-shadow: 0 0 10 px black, 0 0 10 px black, 0 0 10 px black, 0 0 10 px black, 0 0 10 px black, 0 0 10 px black;
+        }
+
+        .wrap6 {
+            background: deeppink;
+            color: #fff;
+            font-size: 70px;
+        }
+
+        .wrap6 text {
+            fill: currentColor;
+        }
+
+        .wrap6 svg {
+            overflow: visible;
+        }
+
+        .wrap6 use {
+            stroke: black;
+            stroke-width: 6;
+            stroke-linejoin: round;
+        }
+
+        .wrap7 {
+            font-size: 4em;
+            background: #203;
+            color: #ffc;
+            text-shadow: 0 0 .1em, 0 0 .3em;
+        }
+
+        .wrap8 {
+            font-size: 4em;
+            background: #203;
+            color: #ffc;
+            transition: 1s;
+        }
+
+        .wrap8:hover {
+            text-shadow: 0 0 .1em, 0 0 .3em;
+            cursor: pointer;
+        }
+
+        .wrap9 {
+            font-size: 4em;
+            background: #203;
+            color: #fff;
+            transition: 1s;
+        }
+
+        .wrap9:hover {
+            color: transparent;
+            text-shadow: 0 0 .1em #fff, 0 0 .3em #fff;
+            cursor: pointer;
+        }
+
+        .wrap10 {
+            background: #203;
+        }
+
+        .wrap10 a {
+            font-size: 4em;
+            color: #fff;
+            transition: 1s;
+            text-decoration: none;
+        }
+
+        .wrap10 a:hover {
+            -webkit-filter: blur(4px);
+            filter: blur(4px);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/letterpress" target="_blank">http://play.csssecrets.io/letterpress</a><br>
+<a href="http://play.csssecrets.io/stroked-text" target="_blank">http://play.csssecrets.io/stroked-text</a><br>
+<a href="http://play.csssecrets.io/glow" target="_blank">http://play.csssecrets.io/glow</a><br>
+<h1>凸版印刷</h1>
+<p>
+    凸版印刷效果基础条件：下方颜色较浅的阴影（或上方颜色较深的）会制造出一个物件被“刻在”表面的假象。<br>
+    同样的，下方颜色较深的阴影（或上方颜色较浅的）会制造出一个物件从表面凸起的假象。
+</p>
+<h2>深色字在颜色较浅的背景上时，通常最适合在下方有一道颜色较浅的阴影。多浅取决于你的颜色值和你希望效果有多强</h2>
+<div class="wrap1">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, impedit.
+</div>
+<h2>浅色字在颜色较深的背景上时，最适合在上方有一道颜色较深的阴影</h2>
+<div class="wrap2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, impedit.
+</div>
+
+<h1>外框文字</h1>
+<h2>
+    在未来，文字要加外框会相当容易，只要我们用text-shadow的扩散参数把它们变大 <br>
+    目前最普遍的方式是用稍微不同的偏移来堆叠好几个text-shadow
+</h2>
+<div class="wrap3">
+    css
+</div>
+<h2>也可以不用平移，叠上几个有点模糊的阴影</h2>
+<div class="wrap4">
+    css
+</div>
+<h2>可惜外框越粗，这两个技巧产生的结果越糟</h2>
+<div class="wrap5">
+    css
+</div>
+<h2>使用svg的方法</h2>
+<div class="wrap6">
+    <svg width="2em" height="1.2em">
+        <use xlink:href="#css"/>
+        <text id="css" y="1em">css</text>
+    </svg>
+</div>
+<h1>光晕文字</h1>
+<h2>最简单的形式是，只用一对堆叠在一起的text-shadow，没有平移、颜色跟文字一样即可</h2>
+<div class="wrap7">
+    glow
+</div>
+<h2>若要当做鼠标滑过效果，应该加一个过度</h2>
+<div class="wrap8">
+    glow
+</div>
+<h2>还可以隐藏文字、只显示阴影所建立的拟似模糊的文字</h2>
+<div class="wrap9">
+    glow
+</div>
+<h2>注意个问题，上面的效果，如果浏览器不支援，文字不会出现。 另外也可以通过css滤镜来模糊文字</h2>
+<div class="wrap10">
+    <a href="">glow</a>
+</div>
+</body>
+</html>
