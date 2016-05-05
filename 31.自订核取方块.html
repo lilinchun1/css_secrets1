@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>31.自订核取方块</title>
+    <style>
+        body {
+            padding-left: 40px;
+            font-size: 2em;
+        }
+        .wrap1 label {
+            line-height: 40px;
+        }
+        .wrap1 input[type="checkbox"] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        .wrap1 input[type="checkbox"] + label::before {
+            content: '\a0';
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+            border-radius: 4px;
+            background: silver;
+            text-align: center;
+        }
+
+        .wrap1 input[type="checkbox"]:checked + label::before {
+            content: '\2713';
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/checkboxes" target="_blank">http://play.csssecrets.io/checkboxes</a>
+<br>
+<br>
+<div class="wrap1">
+    <input type="checkbox" name="" id="a1">
+    <label for="a1">awesome!</label>
+</div>
+</body>
+</html>
