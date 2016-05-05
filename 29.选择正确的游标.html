@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        :disabled,
+        [disabled],
+        [aria-disabled] {
+            cursor: not-allowed;
+        }
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            /*cursor: url("transparent.gif"); 使用一张1*1 gif图片*/
+            cursor: none;
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/disabled">http://play.csssecrets.io/disabled</a>
+<h1>支出停用（disabled）状态</h1>
+<button>button</button>
+<button disabled>button</button>
+<h1>隐藏游标</h1>
+<div class="div1"></div>
+</body>
+</html>
