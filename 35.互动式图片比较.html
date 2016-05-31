@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>35.互动式图片比较</title>
+    <style>
+        .wrap {
+            position: relative;
+            display: inline-block;
+        }
+
+        .wrap > div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 50%;
+            max-width: 100%;
+            overflow: hidden;
+            resize: horizontal;
+        }
+
+        .wrap > div::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 5px;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(-45deg, #fff 50%, transparent 0);
+            background-clip: content-box;
+            cursor: ew-resize;
+        }
+
+        .wrap img {
+            display: block;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .wrap2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .wrap2 > div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+        }
+
+        .wrap2 img {
+            display: block;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .wrap2 input {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/image-slider" target="_blank">http://play.csssecrets.io/image-slider</a>
+<br>
+<a href="http://thenewcode.com/819/A-Before-And-After-Image-Comparison-Slide-Control-in-HTML5" target="_blank">http://thenewcode.com/819/A-Before-And-After-Image-Comparison-Slide-Control-in-HTML5</a>
+<br>
+<h1>css resize解法</h1>
+<div class="wrap">
+    <div>
+        <img src="http://csssecrets.io/images/adamcatlace-before.jpg" alt="1"/>
+    </div>
+    <img src="http://csssecrets.io/images/adamcatlace.jpg" alt="2"/>
+</div>
+<h1>输入型别为范围的解法</h1>
+<div class="wrap2">
+    <div>
+        <img src="http://csssecrets.io/images/adamcatlace-before.jpg" alt="1"/>
+    </div>
+    <img src="http://csssecrets.io/images/adamcatlace.jpg" alt="2"/>
+    <input type="range" name="" id="ip2" value="10" min="0" max="100" oninput="moveslide()">
+</div>
+<script>
+    var img2 = document.getElementsByClassName('wrap2')[0].getElementsByTagName('div')[0];
+    var ip2 = document.getElementById('ip2');
+
+    function moveslide() {
+        img2.style.width = ip2.value + '%';
+    }
+
+    window.onload = function () {
+
+        moveslide();
+    }
+</script>
+</body>
+</html>
