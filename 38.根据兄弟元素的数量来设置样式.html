@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>根据兄弟元素的数量来设置样式</title>
+    <style>
+        h1 {
+            margin-top: 40px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            width: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: lightgrey;
+            display: inline-block;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .wrap1 li:nth-child(4),
+        .wrap1 li:nth-child(4) ~ li {
+            background-color: indianred;
+        }
+
+        .wrap2 li:first-child:nth-last-child(4),
+        .wrap2 li:first-child:nth-last-child(4) ~ li {
+            background-color: indianred;
+        }
+
+        .wrap3 li:nth-child(n+4) {
+            background-color: indianred;
+        }
+
+        .wrap4 li:first-child:nth-last-child(n+4),
+        .wrap4 li:first-child:nth-last-child(n+4) ~ li {
+            background-color: indianred;
+        }
+
+        .wrap5 li:first-child:nth-last-child(-n+4),
+        .wrap5 li:first-child:nth-last-child(-n+4) ~ li {
+            background-color: indianred;
+        }
+
+        .wrap6 li:first-child:nth-last-child(n+2):nth-last-child(-n+6),
+        .wrap6 li:first-child:nth-last-child(n+2):nth-last-child(-n+6) ~ li {
+            background-color: indianred;
+        }
+    </style>
+</head>
+<body>
+<a href="http://play.csssecrets.io/styling-sibling-count" target="_blank">http://play.csssecrets.io/styling-sibling-count</a>
+<br>
+<br>
+<h1>li:nth-child(4), li:nthchild(4) ~ li</h1>
+<ul class="wrap1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+</ul>
+<h1>li:first-child:nth-last-child(4),li:first-child:nth-last-child(4) ~ li</h1>
+<ul class="wrap2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<ul class="wrap2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<ul class="wrap2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+</ul>
+<h1>li:nth-child(n+4)</h1>
+<ul class="wrap3">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<ul class="wrap3">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<ul class="wrap3">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+</ul>
+<h1>li:first-child:nth-last-child(n+4),
+    li:first-child:nth-last-child(n+4) ~ li</h1>
+<ul class="wrap4">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<ul class="wrap4">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<ul class="wrap4">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+</ul>
+<ul class="wrap4">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+
+<h1>li:first-child:nth-last-child(-n+4),
+    li:first-child:nth-last-child(-n+4) ~ li</h1>
+<ul class="wrap5">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<ul class="wrap5">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<ul class="wrap5">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+</ul>
+<ul class="wrap5">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+<h1>li:first-child:nth-last-child(n+2):nth-last-child(-n+6),
+    li:first-child:nth-last-child(n+2):nth-last-child(-n+6) ~ li</h1>
+<ul class="wrap6">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<ul class="wrap6">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<ul class="wrap6">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+<ul class="wrap6">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+</ul>
+<ul class="wrap6">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+</body>
+</html>
